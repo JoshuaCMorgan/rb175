@@ -1,9 +1,5 @@
 # advice.rb
 
-# acts as storage for our dynamic response to client based on request.
-# used for content generation in web application
-
-# Advice class will augment our web app to now also dispense advice.
 class Advice
   def initialize
     @advice_list = [

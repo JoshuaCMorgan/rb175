@@ -1,3 +1,4 @@
+# simulating stateful application that keep track of page number
 require "socket"
 
 def parse_request(request_line)

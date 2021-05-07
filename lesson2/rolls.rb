@@ -26,6 +26,7 @@ loop do
   client.puts "Content-Type: text/html\r\n\r\n"
   client.puts "<html>"
   client.puts "<body>"
+  #pre tag tells browswer to print directly to the user without modifications, preserving whitespace.
   client.puts "<pre>"
   client.puts http_method
   client.puts path

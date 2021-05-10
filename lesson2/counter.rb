@@ -1,4 +1,6 @@
 # simulating stateful application that keep track of page number
+# you can send whatever is necessary for rendering the page by using the URL.
+# and by crafting the urls and links (see <a> tags), you can give the impression of a program that is maintaining some state that is holding some values between page refreshes. 
 require "socket"
 
 def parse_request(request_line)
@@ -37,6 +39,7 @@ loop do
   number = params["number"].to_i
   client.puts("<p>The current number is #{number}.</p>")
 
+  # make a link to the current page.  But, with parameters added/manipulated
   client.puts("<a href='?number=#{number + 1}'>Add one</a>")
   client.puts("<a href='?number=#{number - 1}'>Subtract one</a>")
   client.puts "</body>"

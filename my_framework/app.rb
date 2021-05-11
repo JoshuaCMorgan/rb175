@@ -17,6 +17,8 @@ class App < Monroe
       status = '200'
       headers = {"Content-Type" => 'text/html'}
       response(status, headers) do
+        # we could have put only 'piece_of_advice'
+        # we used has to aid in reading code.
         erb(:advice, message: piece_of_advice)
       end
     else
